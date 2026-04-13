@@ -11,7 +11,7 @@
 
 ## Tema
 ### Descripción
-*2 a 6 líneas describiendo el negocio (menos es más)*
+Sistema de gestion de plazas de estacionamiento, admite reservas inmediatas o por adelantado, con un dashboard para el administrador del estacionamiento y una pwa para los clientes.
 
 ### Modelo
 ![imagen del modelo]()
