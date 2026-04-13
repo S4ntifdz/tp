@@ -2,7 +2,7 @@
 
 ## Grupo
 ### Integrantes
-* legajo - Apellido(s), Nombre(s)
+* 47141 - Santiago Jesus Fernandez
 
 ### Repositorios
 * [frontend app](http://hyperlinkToGihubOrGitlab)
