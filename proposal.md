@@ -5,18 +5,15 @@
 * 47141 - Santiago Jesus Fernandez
 
 ### Repositorios
-* [frontend app](http://hyperlinkToGihubOrGitlab)
-* [backend app](http://hyperlinkToGihubOrGitlab)
-*Nota*: si utiliza un monorepo indicar un solo link con fullstack app.
+* [PWA para clientes]([http://hyperlinkToGihubOrGitlab](https://github.com/S4ntifdz/Tp-Estacionamiento-PWA.git))
+* [Backend con Server side rendering del dashboard para administradores]([http://hyperlinkToGihubOrGitlab](https://github.com/S4ntifdz/Estacionamiento-Core.git))
 
 ## Tema
 ### Descripción
-Sistema de gestion de plazas de estacionamiento, admite reservas inmediatas o por adelantado, con un dashboard para el administrador del estacionamiento y una pwa para los clientes.
+Sistema de gestion de plazas de estacionamiento, admite reservas inmediatas o por adelantado, con un dashboard para el administrador del estacionamiento y una pwa para los clientes. La misma se maneja con saldo cargado en la cuenta del usuario.
 
 ### Modelo
-![imagen del modelo]()
-
-*Nota*: incluir un link con la imagen de un modelo, puede ser modelo de dominio, diagrama de clases, DER. Si lo prefieren pueden utilizar diagramas con [Mermaid](https://mermaid.js.org) en lugar de imágenes.
+<img width="1092" height="720" alt="image" src="https://github.com/user-attachments/assets/595ae62e-7d58-4f5a-ba03-cf6384523cdb" />
 
 ## Alcance Funcional 
 
@@ -27,8 +24,8 @@ Sistema de gestion de plazas de estacionamiento, admite reservas inmediatas o po
 Regularidad:
 |Req|Detalle|
 |:-|:-|
-|CRUD simple|1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad|
-|CRUD dependiente|1. CRUD Habitación {depende de} CRUD Tipo Habitacion<br>2. CRUD Cliente {depende de} CRUD Localidad|
+|CRUD simple|1. CRUD Estacionamiento<br>2. CRUD Plazas de estacionamiento<br>3. CRUD Usuarios<br>3. CRUD Saldo|
+|CRUD dependiente|1. CRUD Plazas de estacionamiento {depende de} CRUD Estacionamiento<br>2. CRUD Transaccion {depende de} Usuario |
 |Listado<br>+<br>detalle| 1. Listado de habitaciones filtrado por tipo de habitación, muestra nro y tipo de habitación => detalle CRUD Habitacion<br> 2. Listado de reservas filtrado por rango de fecha, muestra nro de habitación, fecha inicio y fin estadía, estado y nombre del cliente => detalle muestra datos completos de la reserva y del cliente|
 |CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva|
 
@@ -36,13 +33,15 @@ Regularidad:
 Adicionales para Aprobación
 |Req|Detalle|
 |:-|:-|
-|CRUD |1. CRUD Tipo Habitacion<br>2. CRUD Servicio<br>3. CRUD Localidad<br>4. CRUD Provincia<br>5. CRUD Habitación<br>6. CRUD Empleado<br>7. CRUD Cliente|
-|CUU/Epic|1. Reservar una habitación para la estadía<br>2. Realizar el check-in de una reserva<br>3. Realizar el check-out y facturación de estadía y servicios|
+|CRUD |1. CRUD Estacionamiento<br>2. CRUD de Plazas de estacionamiento<br>3. CRUD Usuarios<br>4. CRUD Saldo<br>|
+|CUU/Epic|1. Reservar una plaza de estacionamiento y que esta impacte en el dashboard de administracion en el dia de la fecha<br>2. Manejo de cierre de caja al final del dia<br>|
 
 
 ### Alcance Adicional Voluntario
 
 *Nota*: El Alcance Adicional Voluntario es opcional, pero ayuda a que la funcionalidad del sistema esté completa y será considerado en la nota en función de su complejidad y esfuerzo.
+Social login con google
+Modelo de negocio multitenant "row level"
 
 |Req|Detalle|
 |:-|:-|
